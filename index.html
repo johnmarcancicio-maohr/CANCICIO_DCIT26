@@ -60,12 +60,12 @@
 
       <div class="gallery">
         <!-- QUIZ IMAGES -->
-        <img src="quiz1.jfif" alt="Quiz 1" />
-        <img src="quiz1(2).jfif" alt="Quiz 1" />
+        <img src="quiz1.jfif" alt="Quiz 1" onclick="openImage(this.src)" />
+        <img src="quiz1(2).jfif" alt="Quiz 1" onclick="openImage(this.src)" />
         
-        <img src="QUIZ2.jpg" alt="Quiz 2" />
+        <img src="QUIZ2.jpg" alt="Quiz 2" onclick="openImage(this.src)" />
 
-        <img src="QUIZ3.jpg" alt="Quiz 3" />
+        <img src="QUIZ3.jpg" alt="Quiz 3" onclick="openImage(this.src)" />
       </div>
     </section>
 
@@ -76,18 +76,40 @@
 
       <div class="gallery">
         <!-- ACTIVITY IMAGES -->
-        <img src="ACTIVITY1.jpg" alt="Activity 1" />
+        <img src="ACTIVITY1.jpg" alt="Activity 1" onclick="openImage(this.src)" />
 
-        <img src="ACTIVITY2.jpg" alt="Activity 2" />
+        <img src="ACTIVITY2.jpg" alt="Activity 2" onclick="openImage(this.src)" />
 
-        <img src="ACTIVITY3.jpg" alt="Activity 3" />
+        <img src="ACTIVITY3.jpg" alt="Activity 3" onclick="openImage(this.src)" />
       </div>
     </section>
+
+    <!-- IMAGE VIEWER -->
+
+    <div id="imageViewer" class="image-viewer" onclick="closeImage()">
+      <span class="close-button">&times;</span>
+
+      <img id="fullImage" src="" alt="Full Image" onclick="event.stopPropagation()" />
+    </div>
 
     <!--FOOTER-->
 
     <footer>
       <p>© My Portfolio</p>
     </footer>
+
+    <!-- IMAGE VIEWER SCRIPT -->
+
+    <script>
+      function openImage(imageSource) {
+        document.getElementById("imageViewer").style.display = "flex";
+        document.getElementById("fullImage").src = imageSource;
+      }
+
+      function closeImage() {
+        document.getElementById("imageViewer").style.display = "none";
+      }
+    </script>
+
   </body>
 </html>
