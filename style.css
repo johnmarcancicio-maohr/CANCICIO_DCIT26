@@ -220,10 +220,10 @@ body {
 }
 
 /* =========================
-   ACTIVITIES
+  EXAMS
 ========================= */
 
-.activities {
+.exams {
   min-height: 100vh;
 
   display: flex;
@@ -241,7 +241,7 @@ body {
   background-image: linear-gradient(to right, #d0d1cd, #b8bab6, #3a3d3a);
 }
 
-.activities h2 {
+.exams h2 {
   font-size: 36px;
 
   margin-bottom: 40px;
